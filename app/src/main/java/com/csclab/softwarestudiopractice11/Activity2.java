@@ -57,16 +57,18 @@ public class Activity2 extends Activity{
         public boolean onTouch(View v, MotionEvent event) {
             switch(event.getAction()){
                 case MotionEvent.ACTION_DOWN:  //ACTION_DOWN
-                    x = v.getX();
-                    y = v.getY();
+                    x = event.getRawX();
+                    y = event.getRawY();
                     break;
                 case MotionEvent.ACTION_MOVE: //ACTION_MOVE
                     mx = (int)(event.getRawX() - x);
                     my = (int)(event.getRawY() - 50 - y);
                     //v.layout();
-                    v.animate().x(x + mx).y(y + my).setDuration(0).start();
-                    x = v.getX();
-                    y = v.getY();
+                    /*v.layout(mx,my,dino.getWidth());
+                    v.*/
+                    v.animate().x(v.getX() + mx).y(v.getY() + my).setDuration(0).start();
+                    /*x = v.getX();
+                    y = v.getY();*/
 
 
                     break;
