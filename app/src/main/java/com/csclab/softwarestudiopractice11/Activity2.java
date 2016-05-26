@@ -64,7 +64,9 @@ public class Activity2 extends Activity{
                     mx = (int)(event.getRawX() - x);
                     my = (int)(event.getRawY() - 50 - y);
                     //v.layout();
-                    v.animate().x(mx).y(my).setDuration(0).start();
+                    v.animate().x(x + mx).y(y + my).setDuration(0).start();
+                    x = v.getX();
+                    y = v.getY();
 
 
                     break;
