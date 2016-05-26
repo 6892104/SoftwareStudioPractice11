@@ -25,7 +25,7 @@
             android:layout_marginRight="5pt"
             android:id="@+id/name"
             android:layout_width="match_parent"
-            android:inputType="numberDecimal">
+            android:inputType="text">
         </EditText>
         <Button
             android:layout_width="wrap_content"
